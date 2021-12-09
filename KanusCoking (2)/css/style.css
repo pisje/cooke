@@ -1,0 +1,74 @@
+body { 
+    display: grid;
+    grid-template-areas: 
+      "header header header"
+      "nav article ads"
+      "footer footer footer";
+    grid-template-rows: 60px 1fr 60px;
+    grid-template-columns: 20% 1fr 15%;
+    grid-gap: 1px;
+    height: 100vh;
+    margin: 0;
+background-image: url("../img/food.jpg");
+    }
+   
+  #Header {
+    grid-area: header;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 60px;
+    font-family: bold;
+    
+  }
+  #Footer {
+    grid-area: footer;
+    text-align: center;
+    
+  }
+  #Article { 
+    grid-area: article; 
+    
+    }
+  #Nav { 
+    grid-area: nav; 
+    width: 45%;
+    }
+  #Right { 
+    grid-area: ads; 
+    }
+
+    /*sidebar*/
+
+    .sidebar {
+      height: 100%;
+      width: 170px;
+      position: fixed;
+      z-index: 1;
+      background-color: rgb(219, 219, 219);
+      overflow-x: hidden;
+      padding-top: 16px;
+      border-bottom-right-radius: 10%;
+    border-top-right-radius: 10%;
+    }
+    
+    .sidebar a {
+      padding: 50px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #000000;
+      display: block;
+    }
+    
+    .sidebar a:hover {
+      color: #000000;
+      background-color: rgb(97, 97, 97);
+      transition: 1.4s;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidebar {padding-top: 15px;}
+      .sidebar a {font-size: 18px;}
+    }
+
+    
+    
